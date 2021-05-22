@@ -36,7 +36,7 @@ export default function Form(props) {
           required
           value={email}
         />
-        <button>Create</button>
+        <button>Add Contact</button>
       </form>
 
     </div>

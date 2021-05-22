@@ -32,7 +32,7 @@ export default function ContactEdit(props) {
           required
           value={email}
         />
-        <button>Edit</button>
+        <button>Save</button>
       </form>
     </li>
   );
