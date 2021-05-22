@@ -1,10 +1,10 @@
 import React from 'react';
-import Todo from './Todo';
+import ContactBook from './ContactBook';
 
 function App() {
   return (
     <div className="App">
-      <Todo />
+      <ContactBook />
     </div>
   );
 }

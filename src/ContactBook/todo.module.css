@@ -4,10 +4,7 @@
   width: 80%;
   border: 1px solid #000;
   padding: 30px 20px;
-  border-radius: 20px;
-  background-color: #ffcead;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  background-color: rgb(142, 147, 211);
 }
 
 .formWrapper h3 {
@@ -22,8 +19,6 @@
   height: 50px;
   padding: 10px;
   font-size: 20px;
-  border-radius: 15px;
-  border: 2px solid #867ae9;
   margin-bottom: 20px;
 }
 
@@ -41,9 +36,7 @@
   color: #fff;
   border: none;
   cursor: pointer;
-  background-color: #867ae9;
-  box-shadow: none;
-  transition: box-shadow 1s;
+  background-color: #000000;
 }
 
 .formWrapper button:hover {
@@ -51,37 +44,36 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.todoList {
+.contactList {
   list-style: none;
   max-width: 900px;
   width: 80%;
   margin: 0 auto;
 }
 
-.todoList li {
+.contactList li {
   width: 100%;
   min-height: 70px;
   height: auto;
   margin-bottom: 20px;
-  background-color: #ffcead;
-  border: 1px solid #000;
-  border-radius: 20px;
+  background-color: #76a2d1;
   position: relative;
   display: flex;
   padding: 20px;
   padding-right: 40px;
   justify-content: space-between;
   align-items: center;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.todoList li p {
+.contactList li p {
   width: 90%;
-  font-size: 24px;
+  font-size: 30px;
+}
+.contactList li p span{
+  font-weight: 700;
 }
 
-.todoList li input {
+.contactList li input {
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -93,7 +85,7 @@
   height: 20px;
   cursor: pointer;
   right: 10px;
-  top: 10px;
+  top: 20px;
 }
 
 .editIcon {
@@ -101,8 +93,8 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-  right: 10px;
-  top: 40px;
+  right: 50px;
+  top: 20px;
 }
 
 .editingTodo form {
