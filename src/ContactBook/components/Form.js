@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import classes from '../todo.module.css';
+import { contactContext } from '../../ContactContext'
 
-export default function Form(props) {
-  const { contactList, setContactList } = props;
 
+export default function Form() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-
+  const { createContact } = useContext(contactContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setContactList([...contactList, { name, email }]);
+    const data = {
+      name,
+      email,
+    };
+    createContact(data);
     setName('');
     setEmail('');
   };

@@ -1,25 +1,25 @@
 import classes from '../todo.module.css';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { contactContext } from '../../ContactContext';
 
 export default function ContactEdit(props) {
-  const { currentName, currentEmail, contactList, setContactList, index, setEditContact } = props;
+  const { name: currentName, email: currentEmail, id } = props.data;
 
-  const [name, setTitle] = useState(currentName);
+  const [name, setName] = useState(currentName);
   const [email, setEmail] = useState(currentEmail);
+
+  const { changeContact } = useContext(contactContext);
 
   const handleEdit = (e) => {
     e.preventDefault();
-    setContactList(
-      contactList.map((todo, i) => (i === index ? { ...todo, name, email } : todo))
-    );
-    setEditContact(null);
+    changeContact(id, email, name);
   };
 
   return (
     <li className={classes.editingTodo}>
       <form onSubmit={handleEdit}>
         <input
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           type="text"
           name="name"
           required

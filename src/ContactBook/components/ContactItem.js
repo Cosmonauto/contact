@@ -1,34 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import cancelImg from '../../assets/icons/user-minus-solid.svg';
 import editImg from '../../assets/icons/user-edit-solid.svg';
+import { contactContext } from '../../ContactContext';
 import classes from '../todo.module.css';
 
 export default function ContactItem(props) {
-  const { contact, index, removeContact, handleEditClick } =
-    props;
+  const { name, email, id } = props.data;
+  const { deleteContact, changeEditId } = useContext(contactContext);
+
+  const removeContact = () => {
+    deleteContact(id);
+
+  }
+
 
   return (
-    <li key={index}>
+    <li>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <p>Name:</p>
         <p>
           <span>
-            {contact.name}
+            {name}
           </span>
         </p>
         <p>Email:</p>
         <p>
-          {contact.email}
+          {email}
         </p>
       </div>
       <img
         className={classes.cancelIcon}
         src={cancelImg}
-        onClick={() => removeContact(index)}
+        onClick={removeContact}
         alt="cancel-img"
       />
       <img
-        onClick={() => handleEditClick(index)}
+        onClick={() => changeEditId(id)}
         className={classes.editIcon}
         src={editImg}
         alt="edit-img"

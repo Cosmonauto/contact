@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Form from './components/Form';
-import TodoList from './components/ContactContent';
+import ContactContent from './components/ContactContent';
 
 export default function ContactBook() {
-  const [contactList, setContactList] = useState([]);
-
   return (
     <div>
-      <Form contactList={contactList} setContactList={setContactList} />
-
-      <TodoList contactList={contactList} setContactList={setContactList} />
+      <Form />
+      <ContactContent />
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import ContactBook from './ContactBook';
+import ContactContextProvider from './ContactContext'
 
 function App() {
   return (
-    <div className="App">
+    <ContactContextProvider>
       <ContactBook />
-    </div>
+    </ContactContextProvider>
   );
 }
 
